@@ -1,10 +1,3 @@
-# Computer Programming 1
-# Unit 11 - Graphics
-#
-# A scene that uses loops to make stars and make a picket fence.
-
-
-# Imports
 import pygame
 import random
 
