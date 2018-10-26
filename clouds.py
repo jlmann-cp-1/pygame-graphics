@@ -57,15 +57,6 @@ while not done:
     ''' grass '''
     pygame.draw.rect(screen, GREEN, [0, 400, 800, 200])
 
-    ''' fence '''
-    y = 380
-    for x in range(5, 800, 30):
-        pygame.draw.polygon(screen, WHITE, [[x+5, y], [x+10, y+5],
-                                            [x+10, y+40], [x, y+40],
-                                            [x, y+5]])
-    pygame.draw.line(screen, WHITE, [0, 390], [800, 390], 5)
-    pygame.draw.line(screen, WHITE, [0, 410], [800, 410], 5)
-
 
     # Update screen
     pygame.display.flip()
