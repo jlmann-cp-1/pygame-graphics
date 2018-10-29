@@ -37,14 +37,17 @@ def draw_stars():
 
 
 # Game loop
-done = False
+running = True
 
-while not done:
+while running:
     # Event processing
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            done = True     
+            running = False     
 
+    # Game Logic
+    ''' nothing here yet '''
+    
     # Drawing code
     screen.fill(BLACK)
     draw_stars()
