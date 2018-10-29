@@ -25,14 +25,15 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 YELLOW = (255, 255, 200)
 
-''' Make stars '''
-stars = []
-for i in range(200):
-    x = random.randrange(0, 800)
-    y = random.randrange(0, 400)
-    r = random.randrange(1, 5)
-    s = [x, y, r, r]
-    stars.append(s)
+def draw_ground():
+    pygame.draw.rect(screen, GREEN, [0, 400, 800, 200])
+    
+def draw_moon(x, y):
+    pygame.draw.ellipse(screen, YELLOW, [x, y, 100, 100])
+    
+def draw_stars():
+    pass
+
 
 # Game loop
 done = False
@@ -44,19 +45,10 @@ while not done:
             done = True     
 
     # Drawing code
-    ''' sky '''
     screen.fill(BLACK)
-
-    ''' stars '''
-    for s in stars:
-        pygame.draw.ellipse(screen, YELLOW, s)
-
-    ''' moon '''
-    pygame.draw.ellipse(screen, YELLOW, [575, 75, 100, 100])
-
-    ''' grass '''
-    pygame.draw.rect(screen, GREEN, [0, 400, 800, 200])
-    
+    draw_stars()
+    draw_moon(575, 75)
+    draw_ground()
 
     # Update screen
     pygame.display.flip()
