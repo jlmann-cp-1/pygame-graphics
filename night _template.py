@@ -1,7 +1,4 @@
-# Computer Programming 1
-# Unit 11 - Graphics
-#
-# A scene that uses loops to make stars and make a picket fence.
+# A scene that uses loops to make randomly generated stars.
 
 
 # Imports
