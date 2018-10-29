@@ -25,6 +25,7 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 YELLOW = (255, 255, 200)
 
+# Drawing functions
 def draw_ground():
     pygame.draw.rect(screen, GREEN, [0, 400, 800, 200])
     
