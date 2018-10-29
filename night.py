@@ -34,10 +34,6 @@ for i in range(200):
     s = [x, y, r, r]
     stars.append(s)
 
-
-def draw_stars():
-    pass
-
 # Game loop
 done = False
 
@@ -60,16 +56,7 @@ while not done:
 
     ''' grass '''
     pygame.draw.rect(screen, GREEN, [0, 400, 800, 200])
-
-    ''' fence '''
-    y = 380
-    for x in range(5, 800, 30):
-        post = [x+5, y], [x+10, y+5], [x+10, y+40], [x, y+40], [x, y+5]
-        pygame.draw.polygon(screen, WHITE, post)
-
-    pygame.draw.rect(screen, WHITE, [0, y+10, 800, 5])
-    pygame.draw.rect(screen, WHITE, [0, y+30, 800, 5])
-
+    
 
     # Update screen
     pygame.display.flip()
