@@ -7,7 +7,9 @@ pygame.init()
 
 
 # Window
-SIZE = (800, 600)
+WIDTH = 800
+HEIGHT = 600
+SIZE = (WIDTH, HEIGHT)
 TITLE = "My Awesome Picture"
 screen = pygame.display.set_mode(SIZE)
 pygame.display.set_caption(TITLE)
@@ -45,13 +47,12 @@ while not done:
     screen.fill(WHITE)
     pygame.draw.rect(screen, RED, [50, 50, 400, 300])
     pygame.draw.line(screen, GREEN, [300, 40], [100,500], 5)
-    pygame.draw.ellipse(screen, BLUE, [100, 100, 600, 300])
-    pygame.draw.polygon(screen, BLACK, [[200, 200], [50,400], [600, 500]], 10)
+    pygame.draw.ellipse(screen, BLUE, [100, 100, 600, 300], 3)
+    pygame.draw.polygon(screen, BLACK, [[200, 200], [50,400], [600, 500]])
 
     ''' angles for arcs are measured in radians (a pre-cal topic) '''
-    pygame.draw.arc(screen, ORANGE, [100, 100, 100, 100], 0, math.pi/2, 1)
     pygame.draw.arc(screen, BLACK, [100, 100, 100, 100], 0, math.pi/2, 50)
-
+   
 
     # Update screen (Actually draw the picture in the window.)
     pygame.display.flip()
